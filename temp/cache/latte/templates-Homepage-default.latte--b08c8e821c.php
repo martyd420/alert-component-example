@@ -52,20 +52,27 @@ final class Templateb08c8e821c extends Latte\Runtime\Template
 		Try alert:
 		<a href="';
 		echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link("alertSuccess!")) /* line 18 */;
-		echo '">Success</a>, <a href="';
+		echo '"><b>Success</b></a>, <a href="';
 		echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link("alertError!")) /* line 18 */;
-		echo '">Error</a> and
+		echo '"><b>Error</b></a> and
 		<a <a href="';
 		echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link("alertCountdown!")) /* line 19 */;
-		echo '">Countdown</a>
+		echo '"><b>Countdown</b></a>
 	</p>
 
-	<h2>We hope you enjoy Nette!</h2>
+	<p>
+		Source code:<br>
+		<a class="link2git" href="https://github.com/martyd420/alert-component-example">https://github.com/martyd420/alert-component-example</a>
+	</p>
 </div>
 
 <style>
 	html { font: normal 18px/1.3 Georgia, "New York CE", utopia, serif; color: #666; -webkit-text-stroke: 1px rgba(0,0,0,0); overflow-y: scroll; }
 	body { background: #3484d2; color: #333; margin: 2em auto; padding: 0 .5em; max-width: 600px; min-width: 320px; }
+
+	.link2git {
+		font-size: 0.7rem;
+	}
 
 	a { color: #006aeb; padding: 3px 1px; }
 	a:hover, a:active, a:focus { background-color: #006aeb; text-decoration: none; color: white; }
