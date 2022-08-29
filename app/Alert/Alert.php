@@ -13,7 +13,7 @@ final class Alert implements HtmlStringable
     private string  $message;
     private array   $types      = ['success', 'error', 'countdown'];
     private int     $timeout    = 6000;
-    private int     $countdown;
+    private int     $countdown  =0;
 
     private string $button_text = 'Retry...';
     private string $button_action = "";
