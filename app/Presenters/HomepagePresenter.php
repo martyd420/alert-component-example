@@ -25,7 +25,7 @@ final class HomepagePresenter extends Nette\Application\UI\Presenter
     public function handleAlertCountdown()
     {
         $alert = new Alert('Odpočítávací alert.', 'countdown');
-        $alert->setCountdown(39);
+        $alert->setCountdown(32);
 
         $this->flashMessage($alert);
     }
