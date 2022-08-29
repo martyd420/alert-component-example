@@ -26,3 +26,7 @@ Todo
 ----------------
 Compile SCSS inside .latte files or use separate file (how to autoload it?)? 
 Validate link expiration for countdown?
+
+Original assignment
+----------------
+![Original assignment image](https://raw.githubusercontent.com/martyd420/alert-component-example/master/_ZADANI/komponenta-alert.png)
