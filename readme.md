@@ -4,6 +4,12 @@ Alert component example
 This is a simple alert component example. It's homework from the "webrebel" course (https://github.com/yablko/youtube-matros-na-tahanie/blob/main/zadania_z_pohovorov.zip).
 Based on https://github.com/nette/web-project
 
+https://pcdr.cz/alert/www/
+
+Online example
+----------------
+[https://pcdr.cz/alert/www/
+](https://pcdr.cz/alert/www/)
 
 Web Server Setup
 ----------------
