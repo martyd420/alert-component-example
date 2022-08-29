@@ -27,6 +27,7 @@ Todo
  - Compile SCSS inside .latte files or use separate file (how to autoload it?)? 
  - Validate link expiration for countdown?
  - Ajax support [in progress]
+ - Obrázky do data:image/png;base64,...
 
 Original assignment
 ----------------
