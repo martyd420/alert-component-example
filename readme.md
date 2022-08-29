@@ -5,8 +5,8 @@ This is a simple alert component example. It's homework from the "webrebel" cour
 Based on https://github.com/nette/web-project
 
 styless.scss is not used. its only for example because it was in the assignment. 
-I use styles inside .latte template of alert component, because it is better, easy and universal :)
-* and i am not know how to compile scss inside .latte file
+I use styles inside .latte template of alert component, because it is better, easy and universal :) 
+(and i am not know how to compile scss inside .latte file)
 
 Online example
 ----------------
