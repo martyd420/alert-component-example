@@ -13,13 +13,16 @@
         {elseif $type === 'error'}
             <img alt="OK" src="img/ko.png">
         {elseif $type === 'countdown'}
-            <span id="countdown" class="countdown">0:39</span>
+            <span id="countdown" class="countdown">0:32</span>
         {/if}
 
         </div>
 
         <div class="right">
             {$message}
+            {if $type === 'countdown'}
+                &nbsp;<a id="disabled-link" class="disabled-link" href="#e">disabled link</a>
+            {/if}
         </div>
     </div>
 </div>
@@ -33,6 +36,20 @@
         z-index: 9999;
     }
 
+    .disabled-link {
+        pointer-events: none;
+        cursor: not-allowed;
+        opacity: 0.33;
+        color: #100260;
+        text-decoration: none;
+    }
+
+    .enabled-link {
+        pointer-events: all;
+        cursor: pointer;
+        color: #100260;
+        text-decoration: underline;
+    }
 
     .alert div img {
         width: 32px;
@@ -110,8 +127,11 @@
         let htmr = setInterval(function(){
             if (countdown === 0) {
                 clearInterval(htmr)
+                let l = document.getElementById('disabled-link')
+                l.classList.remove('disabled-link')
+                l.classList.add('enabled-link')
             }
-            document.getElementById('countdown').textContent = '' + countdown--
+            document.getElementById('countdown').textContent = new Date(1000 * countdown--).toISOString().substr(15, 4)
         }, 1000);
     }
 
