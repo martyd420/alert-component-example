@@ -2,6 +2,7 @@
 {varType string $type}
 {varType string $message}
 {varType int $timeout}
+{varType int $countdown}
 
 <div id="{$uniqid}" class="alert-container">
     <div class="alert alert-{$type}">
@@ -12,7 +13,7 @@
         {elseif $type === 'error'}
             <img alt="OK" src="img/ko.png">
         {elseif $type === 'countdown'}
-            <span class="countdown">0:39</span>
+            <span id="countdown" class="countdown">0:39</span>
         {/if}
 
         </div>
@@ -98,7 +99,23 @@
 </style>
 
 <script>
+
+    let countdown = {$countdown}
+
     setTimeout(function(){
         document.getElementById({$uniqid}).style.display = 'none'
     }, {$timeout});
+
+    if (countdown > 0) {
+        let htmr = setInterval(function(){
+            if (countdown === 0) {
+                clearInterval(htmr)
+            }
+            document.getElementById('countdown').textContent = '' + countdown--
+        }, 1000);
+    }
+
+
+
+
 </script>

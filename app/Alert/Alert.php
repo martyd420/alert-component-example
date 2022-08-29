@@ -11,7 +11,7 @@ final class Alert implements HtmlStringable
     private $type;
     private $types      = ['success', 'error', 'countdown'];
     private $message;
-    private $timeout = 4096;
+    private $timeout = 6000;
     private $uniqid;
     private $countdown;
 
@@ -50,6 +50,7 @@ final class Alert implements HtmlStringable
     public function setCountdown(int $seconds) : void
     {
         $this->countdown = $seconds;
+        $this->timeout = 1.5 * ($seconds * 1000);
     }
 
 }
