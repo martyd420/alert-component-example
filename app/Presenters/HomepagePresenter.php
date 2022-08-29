@@ -26,6 +26,9 @@ final class HomepagePresenter extends Nette\Application\UI\Presenter
     {
         $alert = new Alert('Odpočítávací alert.', 'countdown');
         $alert->setCountdown(32);
+        //$alert->setButtonAction('javascript:alert("Click!")');
+        $alert->setButtonAction('https://www.google.com');
+        $alert->setButtonText('action button');
 
         $this->flashMessage($alert);
     }

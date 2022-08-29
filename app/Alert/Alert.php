@@ -15,6 +15,9 @@ final class Alert implements HtmlStringable
     private $uniqid;
     private $countdown;
 
+    private $button_text = 'Retry...';
+    private $button_action = "";
+
 
     public function __construct(string $message, string $type = 'success')
     {
@@ -35,11 +38,13 @@ final class Alert implements HtmlStringable
     public function __toString() : string
     {
         $params = [
-            'type'      => $this->type,
-            'message'   => $this->message,
-            'timeout'   => $this->timeout,
-            'uniqid'    => $this->uniqid,
-            'countdown' => $this->countdown,
+            'type'          => $this->type,
+            'message'       => $this->message,
+            'timeout'       => $this->timeout,
+            'uniqid'        => $this->uniqid,
+            'countdown'     => $this->countdown,
+            'button_text'   => $this->button_text,
+            'button_action' => $this->button_action,
         ];
 
         $latte = new Engine();
@@ -47,10 +52,24 @@ final class Alert implements HtmlStringable
         return $latte->renderToString(__DIR__ . './templates/alertTemplate.latte', $params);
     }
 
+
     public function setCountdown(int $seconds) : void
     {
         $this->countdown = $seconds;
         $this->timeout = 2 * ($seconds * 1000);
     }
+
+
+    public function setButtonText(string $button_text): void
+    {
+        $this->button_text = $button_text;
+    }
+
+
+    public function setButtonAction(string $button_action): void
+    {
+        $this->button_action = $button_action;
+    }
+
 
 }

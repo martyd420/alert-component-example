@@ -1,6 +1,8 @@
 {varType string $uniqid}
 {varType string $type}
 {varType string $message}
+{varType string $button_text}
+{varType string $button_action}
 {varType int $timeout}
 {varType int $countdown}
 
@@ -21,7 +23,7 @@
         <div class="right">
             {$message}
             {if $type === 'countdown'}
-                &nbsp;<a id="disabled-link" class="disabled-link" href="#e">disabled link</a>
+                &nbsp;<a id="disabled-link" class="action-button disabled-link" href="{$button_action|noescape}">{$button_text}</a>
             {/if}
         </div>
     </div>
@@ -34,6 +36,10 @@
         top: 0;
         right: 0;
         z-index: 9999;
+    }
+
+    .action-button {
+        font-size: 0.8rem;
     }
 
     .disabled-link {
