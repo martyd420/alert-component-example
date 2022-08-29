@@ -49,7 +49,7 @@ final class Alert implements HtmlStringable
 
         $latte = new Engine();
 
-        return $latte->renderToString(__DIR__ . './templates/alertTemplate.latte', $params);
+        return $latte->renderToString(__DIR__ . '/templates/alertTemplate.latte', $params);
     }
 
 
