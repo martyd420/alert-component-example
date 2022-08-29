@@ -24,8 +24,8 @@ Then visit `http://localhost:8000` in your browser to see the welcome page.
 
 Todo
 ----------------
-Compile SCSS inside .latte files or use separate file (how to autoload it?)? 
-Validate link expiration for countdown?
+ - Compile SCSS inside .latte files or use separate file (how to autoload it?)? 
+ - Validate link expiration for countdown?
 
 Original assignment
 ----------------
