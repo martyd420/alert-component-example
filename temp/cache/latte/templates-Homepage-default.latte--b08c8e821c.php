@@ -100,7 +100,7 @@ final class Templateb08c8e821c extends Latte\Runtime\Template
 		extract($this->params);
 		extract($ʟ_args);
 		unset($ʟ_args);
-		echo '	<h1>Congratulations!</h1>
+		echo '	<h1>A l e r t</h1>
 ';
 	}
 
