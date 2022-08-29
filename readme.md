@@ -4,7 +4,9 @@ Alert component example
 This is a simple alert component example. It's homework from the "webrebel" course (https://github.com/yablko/youtube-matros-na-tahanie/blob/main/zadania_z_pohovorov.zip).
 Based on https://github.com/nette/web-project
 
-https://pcdr.cz/alert/www/
+styless.scss is not used. its only for example because it was in the assignment. 
+I use styles inside .latte template of alert component, because it is better, easy and universal :)
+* and i am not know how to compile scss inside .latte file
 
 Online example
 ----------------
@@ -20,3 +22,7 @@ The simplest way to get started is to start the built-in PHP server in the root 
 
 Then visit `http://localhost:8000` in your browser to see the welcome page.
 
+Todo
+----------------
+Compile SCSS inside .latte files or use separate file (how to autoload it?)? 
+Validate link expiration for countdown?
