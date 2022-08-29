@@ -8,15 +8,15 @@ use Nette\HtmlStringable;
 
 final class Alert implements HtmlStringable
 {
-    private $type;
-    private $types      = ['success', 'error', 'countdown'];
-    private $message;
-    private $timeout = 6000;
-    private $uniqid;
-    private $countdown;
+    private string  $type;
+    private string  $uniqid;
+    private string  $message;
+    private array   $types      = ['success', 'error', 'countdown'];
+    private int     $timeout    = 6000;
+    private int     $countdown;
 
-    private $button_text = 'Retry...';
-    private $button_action = "";
+    private string $button_text = 'Retry...';
+    private string $button_action = "";
 
 
     public function __construct(string $message, string $type = 'success')
@@ -32,9 +32,6 @@ final class Alert implements HtmlStringable
     }
 
 
-    /**
-     * @return string
-     */
     public function __toString() : string
     {
         $params = [
