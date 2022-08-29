@@ -9,7 +9,7 @@
 <div id="{$uniqid}" class="alert-container">
     <div class="alert alert-{$type}">
 
-        <div class="left">
+        <div>
         {if $type === 'success'}
             <img alt="OK" src="img/ok.png">
         {elseif $type === 'error'}
@@ -20,7 +20,7 @@
 
         </div>
 
-        <div class="right">
+        <div>
             {$message}
             {if $type === 'countdown'}
                 &nbsp;<a id="disabled-link" class="action-button disabled-link" href="{$button_action|noescape}">{$button_text}</a>

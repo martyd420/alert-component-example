@@ -1,0 +1,104 @@
+$countdown-size: 40px;
+
+/* colors */
+$text-color-success: #2A7E47;
+$text-color-error: #EF1E27;
+$text-color-countdown: #100260;
+
+$background-color-success: #ECFFF1;
+$background-color-error: #FFECED;
+$background-color-countdown: #E7EAF6;
+
+
+.alert-container {
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+
+
+  .alert {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    border-width: 0 0 0 4px;
+    border-style: solid;
+    border-radius: 5px;
+    margin: 8px;
+    padding: 8px;
+    animation: fadeIn 2s;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.2), 0 4px 6px -4px rgb(0 0 0 / 0.2);
+
+    div {
+      margin: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .action-button {
+        font-size: 0.8rem;
+      }
+
+      img {
+        width: 32px;
+        margin: auto;
+      }
+
+      .disabled-link {
+        pointer-events: none;
+        cursor: not-allowed;
+        opacity: 0.33;
+        color: $text-color-countdown;
+        text-decoration: none;
+      }
+
+      .enabled-link {
+        pointer-events: all;
+        cursor: pointer;
+        color: $text-color-countdown;
+        text-decoration: underline;
+      }
+
+      .span{
+        border: 1px solid $text-color-countdown;
+        border-radius: $countdown-size;
+        box-shadow: 0 10px 15px -0px rgb(0 0 0 / 0.2), 0 4px 6px -0px rgb(0 0 0 / 0.2);
+        width: $countdown-size;
+        height: $countdown-size;
+        font-weight: normal;
+        font-size: 0.9rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      } // end span inside div inside .alert
+
+    } // end div inside .alert
+
+  } // end alert
+
+  .alert-success {
+    background-color: $background-color-success;
+    color: $text-color-success;
+    border-color: $text-color-success;
+  }
+
+  .alert-error {
+    background-color: $background-color-error;
+    color: $text-color-error;
+    border-color: $text-color-error;
+  }
+
+  .alert-countdown {
+    background-color: $background-color-countdown;
+    color: $text-color-countdown;
+    border-color: $text-color-countdown;
+  }
+
+} // end alert container
+
+
+@keyframes fadeIn {
+0% { opacity: 0; }
+100% { opacity: 1; }
+}
