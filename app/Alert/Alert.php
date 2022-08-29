@@ -50,7 +50,7 @@ final class Alert implements HtmlStringable
     public function setCountdown(int $seconds) : void
     {
         $this->countdown = $seconds;
-        $this->timeout = 1.5 * ($seconds * 1000);
+        $this->timeout = 2 * ($seconds * 1000);
     }
 
 }
