@@ -1,0 +1,16 @@
+Alert component example 
+=================
+
+This is a simple alert component example. It's homework from the "webrebel" course (https://github.com/yablko/youtube-matros-na-tahanie/blob/main/zadania_z_pohovorov.zip).
+Based on https://github.com/nette/web-project
+
+
+Web Server Setup
+----------------
+
+The simplest way to get started is to start the built-in PHP server in the root directory of your project:
+
+	php -S localhost:8000 -t www
+
+Then visit `http://localhost:8000` in your browser to see the welcome page.
+

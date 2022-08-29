@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+
+	<title>Alert</title>
+</head>
+
+<body>
+
+	{foreach $flashes as $flash}
+		{var App\Alert\Alert $message = $flash->message}
+		{$message}
+	{/foreach}
+
+	{include content}
+
+	{block scripts}
+	<script src="/js/netteForms.min.js"></script>
+	<script src="/js/naja.min.js"></script>
+	<script src="/js/main.js"></script>
+	{/block}
+</body>
+</html>

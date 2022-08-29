@@ -1,0 +1,68 @@
+{varType string $uniqid}
+{varType string $type}
+{varType string $message}
+{varType int $timeout}
+
+<div id="{$uniqid}" class="alert-container">
+    <div class="alert alert-{$type}">
+        <div class="left">
+
+        </div>
+        <div class="right">
+            {$message}
+        </div>
+
+    </div>
+</div>
+
+<style>
+    .alert-container {
+        font-weight: bold;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 9999;
+    }
+
+
+    .alert {
+        border-width: 0 0 0 4px;
+        border-style: solid;
+        border-radius: 5px;
+        margin: 8px;
+        padding: 8px;
+        animation: fadeIn 2s;
+        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.2), 0 4px 6px -4px rgb(0 0 0 / 0.2);
+
+    }
+
+    .alert-success {
+        background-color: #ECFFF1;
+        color: #2A7E47;
+        border-color: #48BB6B;
+    }
+
+    .alert-error {
+        background-color: #FFECED;
+        color: #EF1E27;
+        border-color: #EF1E27;
+    }
+
+    .alert-countdown {
+        background-color: #E7EAF6;
+        color: #100260;
+        border-color: #100260;
+    }
+
+    @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+
+</style>
+
+<script>
+    setTimeout(function(){
+        document.getElementById({$uniqid}).style.display = 'none'
+    }, {$timeout});
+</script>
